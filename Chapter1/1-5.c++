@@ -7,7 +7,7 @@ string compression(string);
 int main(){
 
     string original;
-    cout << "Enter the original sequence." << endl;
+    cout << "Enter the original string." << endl;
     cin >> original;
 
     cout << "Compression in progress." << endl;
@@ -49,9 +49,11 @@ string compression(string original){
     delete[] memo;
     
     if(compressioned.size() > size){
+        cout << "Compression failed." << endl;
         return original;
     }
     else{
+        cout << "Compressed." << endl; 
         return compressioned;
     }
 }
